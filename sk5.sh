@@ -89,7 +89,7 @@ EOF
     systemctl stop sk5
     systemctl start sk5
     
-    # 仅显示公网IP, 端口, 用户名, 密码
+    
     clear  # 清空当前页面
     echo -e "${GREEN}代理服务器搭建完成！${NC}"
     echo -e "${BLUE}公网IP: ${PUBLIC_IP}${NC}"
@@ -97,6 +97,12 @@ EOF
     echo -e "${BLUE}用户名: ${USER}${NC}"
     echo -e "${BLUE}密码: ${PASSWD}${NC}"
     echo -e "${BLUE}链接：socks5://${USER}:${PASSWD}@${PUBLIC_IP}:${PORT}${NC}"
+    echo
+    echo "QQ群: "
+    echo
+    echo "TG群: "
+    echo "欢迎各位交流，包括低价腾讯云，阿里云，华为云服务器："
+    echo
 }
 
 function quick_socks5() {
@@ -112,9 +118,9 @@ function quick_socks5() {
 function main_menu() {
     while true; do
         clear
-        echo -e "${YELLOW}脚本由小晏同学进行编写${NC}"
+        echo -e "${YELLOW}Love_Mx${NC}"
         echo "=========================Love_Mx======================================="
-        echo "节点社区:微信             微信联系:"
+        echo "节点社区:微信      QQ群:              TG群：                             "
         echo "欢迎各位交流，包括低价腾讯云，阿里云，华为云服务器："
         echo "腾讯云优惠链接：https://partner.cloud.tencent.com/invitation/1000173263005ffd1c7cedd4f/100022386526?inviteType=3"
         echo "退出脚本，请按键盘ctrl c退出即可"
