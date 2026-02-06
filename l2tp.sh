@@ -428,16 +428,16 @@ finally(){
     clear
     echo "✅ L2TP/IPsec VPN 安装完成！"
     echo "服务器 IP        : ${IP}"
-    echo "预共享密钥       : ${mypsk}"
     echo "VPN 用户名       : ${username}"
     echo "VPN 密码         : ${password}"
-    echo "本地地址         : ${iprange}.1"
-    echo "客户端分配范围   : ${iprange}.2-${iprange}.254"
-    echo "连接类型         : L2TP/IPSec PSK"
-    echo "默认网络接口     : ${DEFAULT_IFACE}"
+    echo
+    echo
     echo
     echo "QQ群："
+    echo
     echo "TG群："
+    echo
+    echo
     echo
 }
 
