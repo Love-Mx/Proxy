@@ -427,17 +427,18 @@ EOF
 finally(){
     clear
     echo "✅ L2TP/IPsec VPN 安装完成！"
+    echo
     echo "服务器 IP        : ${IP}"
+    echo
     echo "VPN 用户名       : ${username}"
+    echo
     echo "VPN 密码         : ${password}"
     echo
-    echo
-    echo
+    echo "如需购买服务器或咨询请联系："
+    echo             "⬇"
     echo "QQ群："
     echo
     echo "TG群："
-    echo
-    echo
     echo
 }
 
