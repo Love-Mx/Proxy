@@ -2,7 +2,10 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 #=======================================================================#
-#   适用系统:  CentOS 6+ / Debian 7+ / Ubuntu 12+                        #
+#   System Supported:  CentOS 6+ / Debian 7+ / Ubuntu 12+               #
+#   Description: L2TP VPN Auto Installer                                #
+#   Author: Merciless                                                   #
+#   Intro:  www.merciless.cn                                            #
 #=======================================================================#
 cur_dir=`pwd`
 
@@ -433,8 +436,24 @@ finally(){
     echo "连接类型         : L2TP/IPSec PSK"
     echo "默认网络接口     : ${DEFAULT_IFACE}"
     echo
-    echo "QQ群："
-    echo "TG群："
+    echo "注意：如果连接后无法访问互联网，请检查："
+    echo "1. 服务器防火墙是否开放了所需端口"
+    echo "2. 是否已启用IP转发 (net.ipv4.ip_forward=1)"
+    echo "3. 是否已正确设置NAT (MASQUERADE 规则)"
+    echo "4. 云服务商的安全组/防火墙规则"
+    echo "5. 默认网络接口是否正确 (当前: ${DEFAULT_IFACE})"
+    echo
+    echo "连接信息："
+    echo "服务器地址: ${IP}"
+    echo "预共享密钥: ${mypsk}"
+    echo "用户名: ${username}"
+    echo "密码: ${password}"
+    echo
+    echo "要添加更多用户，请编辑 /etc/ppp/chap-secrets 文件"
+    echo
+    echo "如果连接后无法访问互联网，请运行以下命令检查："
+    echo "iptables -t nat -L -n -v"
+    echo "sysctl net.ipv4.ip_forward"
 }
 
 # Main
@@ -450,3 +469,4 @@ tunavailable
 get_os_info
 preinstall_l2tp
 install_l2tp
+finally
