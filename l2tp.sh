@@ -5,7 +5,7 @@ export PATH
 #   System Supported:  CentOS 6+ / Debian 7+ / Ubuntu 12+               #
 #   Description: L2TP VPN Auto Installer                                #
 #   Author: Merciless                                                   #
-#   Intro:  www.merciless.cn                                            #
+#   Intro:  Love_Mx                                           #
 #=======================================================================#
 cur_dir=`pwd`
 
@@ -14,9 +14,9 @@ download_root_url="https://dl.lamp.sh/files"
 
 # 默认配置
 DEFAULT_IPRANGE="192.168.18"
-DEFAULT_PSK="yaoyao686"
-DEFAULT_USERNAME="yaoyao686"
-DEFAULT_PASSWORD="yaoyao686"
+DEFAULT_PSK="Mxvpn123"
+DEFAULT_USERNAME="user1"
+DEFAULT_PASSWORD="Mxvpn123"
 
 rootness(){
     if [[ $EUID -ne 0 ]]; then
